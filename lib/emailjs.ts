@@ -17,5 +17,5 @@ export async function sendContactEmail(data: ContactFormData): Promise<void> {
     );
   }
 
-  await emailjs.send(serviceId, templateId, { ...data }, { publicKey });
+  await emailjs.send(serviceId, templateId, { ...data }, publicKey);
 }
