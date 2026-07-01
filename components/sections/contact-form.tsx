@@ -21,8 +21,8 @@ export function ContactForm() {
 
   const isValid =
     name.trim().length > 0 &&
-    email.includes("@") &&
-    message.trim().length > 10;
+    /\S+@\S+\.\S+/.test(email) &&
+    message.trim().length > 0;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
